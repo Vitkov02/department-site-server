@@ -17,7 +17,7 @@ exports.create = async (req, res) => {
   try {
     const { name, subject, achivement } = req.body
     const { img } = req.files
-    let fileName = uuid.v4() + ".jpg"
+    let fileName = uuid.v4() + ".jpg" + ".png"
     img.mv(path.resolve(__dirname, '..', 'static', fileName))
     const newTeacher = await Teacher.create({
       name,

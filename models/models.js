@@ -38,8 +38,8 @@ const StudentWork = sequelize.define('studentwork', {
 
 const StudyPlan = sequelize.define('studyplan', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    title: {type: DataTypes. STRING},
-
+    title: {type: DataTypes.STRING},
+    img: {type: DataTypes.STRING}
 })
 
 Audience.hasMany(AudienceInfo, {as: 'info'});
